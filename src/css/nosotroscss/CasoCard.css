@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+/* Tarjeta principal blanca*/
+.casos-exito-card {
+    background-color: transparent;
+    color: #FEFEFA;
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 450px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ===== SECCIÓN 1 - HEADER ===== */
+.caso-seccion-header {
+    margin-bottom: 30px;
+}
+
+.caso-numero {
+    font-size: 0.9rem;
+    color: #C4B6B6;
+    margin-bottom: 5px;
+}
+
+.caso-titulo {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #FEFEFA;
+}
+
+.caso-logro {
+    font-size: 0.9rem;
+    color: #C4B6B6;
+    margin: 0;
+}
+
+/* ===== SECCIÓN 2 - NEGOCIO ===== */
+.caso-seccion-negocio {
+    margin-bottom: 100px;
+}
+
+.caso-negocio {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: #FEFEFA;
+}
+
+.caso-necesidad {
+    font-size: 0.85rem;
+    color: #C4B6B6;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-weight: 600;      /* CORREGIDO: tenías "600px", el px sobra en font-weight */
+}
+
+.caso-descripcion {
+    font-size: 1rem;
+    font-style: 'Montserrat', sans-serif;
+    color: #C4B6B6;
+    margin: 0;
+    font-weight: 900;
+}
+
+/* ===== SECCIÓN 3 - TAG RESULTADOS ===== */
+.stat-grid {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+
+.stat-grid p {
+    font-size: 0.85rem;
+    color: #C4B6B6;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ===== SECCIÓN 3 - ESTADÍSTICAS ===== */
+.caso-seccion-estadisticas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));  /* CAMBIO: responsive */
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-valor {
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    font-weight: 800;
+    color: #FEFEFA;
+    margin-bottom: 3px;
+    white-space: nowrap;   /* CAMBIO: evita que el número se parta */
+}
+
+.stat-etiqueta {
+    font-size: 0.75rem;
+    color: #C4B6B6;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* ===== SECCIÓN 4 - LOGROS ===== */
+.caso-seccion-logros {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 6px;
+}
+
+.caso-logros {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #C4B6B6;
+    margin-bottom: 12px;
+}
+
+.caso-texto {
+    font-size: 0.9rem;
+    color: #FEFEFA;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.num-blanco {
+    color: #FEFEFA;
+}
+
+.num-acento {
+    color: #141414;   /* negro, o el color que quieras */
+}
+
+/* ============================================
+   VARIANTE CLARA (fondo blanco, texto rojo)
+   ============================================ */
+
+.card-clara {
+    background-color: #FEFEFA;
+}
+
+/* Títulos y textos principales en rojo */
+.card-clara .caso-titulo,
+.card-clara .caso-negocio {
+    color: #89251C;
+}
+
+/* Textos secundarios en rojo */
+.card-clara .caso-numero,
+.card-clara .caso-logro,
+.card-clara .caso-necesidad,
+.card-clara .stat-grid p,
+.card-clara .stat-etiqueta {
+    color: #89251C;
+}
+
+/* Descripción en rojo */
+.card-clara .caso-descripcion {
+    color: #89251C;
+}
+
+/* La línea separadora del grid en rojo */
+.card-clara .stat-grid {
+    border-top: 1px solid rgba(137, 37, 28, 0.3);
+}
+
+/* Números de estadísticas */
+.card-clara .num-blanco {
+    color: #89251C;
+}
+
+.card-clara .num-acento {
+    color: #141414;
+}
+
+/* La sección de logros SÍ mantiene fondo rojo y texto blanco */
+.card-clara .caso-seccion-logros {
+    background-color: #89251C;
+}
+
+.card-clara .caso-logros {
+    color: #C4B6B6;
+}
+
+.card-clara .caso-texto {
+    color: #FEFEFA;
+}

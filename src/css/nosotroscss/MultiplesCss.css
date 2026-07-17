@@ -1,0 +1,108 @@
+.mini-caso-wrapper {
+    flex-shrink: 0;
+    width: 100%;           /* CAMBIO: de 560px fijo a 100% */
+    max-width: 420px;      /* CAMBIO: un poco más anchas */
+}
+
+.mini-caso {
+    width: 100%;
+    height: 100%;          /* CAMBIO: mismo alto para ambas tarjetas */
+    padding: 2.25rem 2rem;
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+/* Etiqueta superior */
+.mini-caso-numero {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+/* Título */
+.mini-caso .titulo {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.1rem;
+    font-weight: 800;
+    margin-bottom: 1.75rem;
+    line-height: 1.1;
+}
+
+/* Estadísticas */
+.mini-caso-estadisticas {
+    display: flex;
+    flex-wrap: wrap;        /* CAMBIO: de nowrap a wrap (que bajen si no caben) */
+    gap: 1.5rem;
+    margin-bottom: 1.75rem;
+    /* CAMBIO: quité el overflow-x: auto que causaba el scroll */
+}
+
+.stad-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;                /* CAMBIO: se reparten el espacio */
+    min-width: 120px;       /* CAMBIO: mínimo antes de bajar */
+    white-space: nowrap;
+}
+
+.stad-valor {
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0;
+}
+
+.stad-etiqueta {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0.35rem;
+}
+
+/* Texto */
+.mini-caso .texto {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Variante clara (Jaus Coffee) */
+.mini-caso--clara {
+    background-color: #FEFEFA;
+}
+.mini-caso--clara .mini-caso-numero,
+.mini-caso--clara .titulo {
+    color: #9C1511;
+}
+.mini-caso--clara .stad-valor {
+    color: #141414;
+}
+.mini-caso--clara .stad-etiqueta {
+    color: #9C1511;
+}
+.mini-caso--clara .texto {
+    color: #9C1511;
+}
+
+/* Variante oscura (Bendito Sun Club) */
+.mini-caso--oscura {
+    background-color: #141414;
+}
+.mini-caso--oscura .mini-caso-numero {
+    color: #9C1511;
+}
+.mini-caso--oscura .titulo {
+    color: #FEFEFA;
+}
+.mini-caso--oscura .stad-valor {
+    color: #FEFEFA;
+}
+.mini-caso--oscura .stad-etiqueta {
+    color: #9C1511;
+}
+.mini-caso--oscura .texto {
+    color: #FEFEFA;
+}

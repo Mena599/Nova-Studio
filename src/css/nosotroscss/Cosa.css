@@ -1,0 +1,63 @@
+.cosa {
+    background-color: #FEFEFA;
+    padding: 3rem 1.5rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;   /* centra el inner en la pantalla */
+}
+
+.cosa-inner {
+    display: flex;
+    justify-content: center;   /* centra las dos columnas */
+    align-items: center;
+    gap: 300px;
+    width: 100%;
+    max-width: 1000px;
+    flex-wrap: wrap;           /* se apilan si no caben */
+}
+
+/* Columna izquierda - título */
+.cosa-izq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cosa-titulo-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 5zpx;
+}
+
+.cosa-titulo {
+    font-family: 'Montserrat', sans-serif;
+    color: #89251C;
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.cosa-eso {
+    font-family: 'Montserrat', sans-serif;
+    color: #141414;
+    font-size: clamp(1.6rem, 3.5vw, 3.3rem);
+    font-weight: 600;
+}
+
+/* Columna derecha - texto */
+.cosa-der {
+    display: flex;
+    align-items: center;
+}
+
+.cosa-texto {
+    font-family: 'Montserrat', sans-serif;
+    color: #89251C;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-weight: 600;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 350px;
+}

@@ -1,0 +1,120 @@
+
+/*Dudas*/
+.contenido-dudas {
+    position: relative;
+    height: 100%;
+    width: auto;
+    padding-left: 100px;
+    background-color: #89251C;
+}
+.dudas {
+    overflow: hidden;
+       position: relative;
+}
+.izq{
+    background-color: #89251C;
+    color: #FEFEFA;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 750px;  
+    position: relative;
+}
+
+.titulo-boton-dudas {
+    display: flex;
+    align-items: flex-start;
+    gap: 1px;
+     flex-wrap: wrap;   /* permite que el botón baje si no cabe */
+}
+
+.btn-primary-nova2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    background-color: transparent;    /* fondo transparente */
+    color: #FEFEFA;                    /* texto blanco */
+    border: 2px solid #FEFEFA;         /* borde blanco */
+    border-radius: 12px;
+    padding: 16px 32px;                /* más grande */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+    font-size: 1.3rem;                 /* texto más grande */
+    white-space: nowrap;
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+.btn-primary-nova2:hover {
+    background-color: #FEFEFA;
+    color: #89251C;
+}
+
+
+.contenido-dudas .hero-titulo h1 {
+    text-align: left;
+    font-size: 2.8rem;
+}
+.dere-dudas{
+
+    background-color: #141414;
+   color: #FEFEFA;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 90px;
+    align-items: flex-start;
+
+}
+
+.dudas-item{
+    max-width: 450px;
+    margin-left: 2rem;
+
+}
+.dudas-titulo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #FEFEFA;
+
+}
+
+.dudas-texto{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #C4B6B6;
+    line-height: 1.6;
+}
+.dudas-perro {
+    position: absolute;
+    bottom: -5%;
+    left: 0;
+    width: 45%;        /* relativo a la columna, no px fijos */
+    max-width: 350px;
+    z-index: 2;
+}
+
+.dudas-cereza{
+    position: absolute;
+    bottom: -7%;
+    left: 25%;
+    width: 50%;
+    max-width: 400px;
+    z-index: 4;
+    transform: rotate(-10deg);
+}
+
+.dudas-labios {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;         /* porcentaje en vez de 550px */
+    width: 50%;
+    max-width: 400px;
+    transform: rotate(30deg);
+    z-index: 3;
+}

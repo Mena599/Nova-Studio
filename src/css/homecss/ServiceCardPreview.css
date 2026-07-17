@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+
+/* Tarjeta base (estructura común) */
+.service-card {
+    border-radius: 12px;
+    padding: 30px;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+        max-width: 320px;   /* ajusta el ancho que quieras */
+    margin: 0 auto;      
+}
+
+/* Número */
+.service-numero {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+
+/* Título */
+.service-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+/* Subtítulo */
+.service-subtitulo {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Línea */
+.service-linea {
+    opacity: 0.3;
+    margin-bottom: 20px;
+}
+
+/* Lista */
+.service-lista {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.service-lista li {
+    margin-bottom: 12px;
+    padding-left: 18px;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.service-lista li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
+
+/* Botón */
+.service-boton {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+/* Botón en tarjeta CLARA */
+.service-card-claro .service-boton {
+    background-color: transparent;
+    color: #141414;
+    border: 1px solid #141414;
+}
+
+.service-card-claro .service-boton:hover {
+    background-color: #141414;
+    color: #FEFEFA;
+}
+
+/* Botón en tarjeta OSCURA */
+.service-card-oscuro .service-boton {
+    background-color: #FEFEFA;
+    color: #141414;
+    border: none;
+}
+
+.service-card-oscuro .service-boton:hover {
+    background-color: #C4B6B6;
+}
+
+/* Botón en tarjeta ROJA */
+.service-card-rojo .service-boton {
+    background-color: #FEFEFA;
+    color: #9C1511;
+    border: none;
+}
+
+.service-card-rojo .service-boton:hover {
+    background-color: #C4B6B6;
+}
+
+/* ===== VARIANTE CLARA ===== */
+.service-card-claro {
+    background-color: #FEFEFA;
+    color: #141414;
+    border: 1px solid #000000;
+}
+
+.service-card-claro .service-titulo,
+.service-card-claro .service-lista li {
+    color: #9C1511;
+}
+
+/* ===== VARIANTE OSCURA ===== */
+.service-card-oscuro {
+    background-color: #141414;
+    color: #FEFEFA;
+}
+
+/* ===== VARIANTE ROJA ===== */
+.service-card-rojo {
+    background-color: #9C1511;
+    color: #FEFEFA;
+}

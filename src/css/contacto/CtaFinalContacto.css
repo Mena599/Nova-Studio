@@ -1,0 +1,95 @@
+.cta-contacto {
+    background-color: #89251C;
+    padding: 3.5rem clamp(1.5rem, 5vw, 5.5rem);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-contacto-inner {
+    max-width: 1260px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 180px;
+}
+
+.cta-contacto-izq {
+    max-width: 420px;
+}
+
+.cta-contacto-label {
+    font-family: 'Montserrat', sans-serif;
+    color: #FEFEFA;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.cta-contacto-titulo {
+    font-family: 'Montserrat', sans-serif;
+    color: #FEFEFA;
+    font-weight: 800;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    line-height: 1.15;
+    margin: 0 0 1rem 0;
+}
+
+.cta-contacto-sub {
+    font-family: 'Montserrat', sans-serif;
+    color: #FEFEFA;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.cta-contacto-boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: #FEFEFA;
+    color: #141414;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.9rem 1.8rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.cta-contacto-boton i {
+    font-size: 1.2rem;
+}
+
+.cta-contacto-img {
+    position: absolute;
+    bottom: -2rem;
+    right: 0;
+    width: 180px;
+    pointer-events: none;
+}
+
+.der{
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+}
+
+@media (max-width: 900px) {
+    .cta-contacto-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .cta-contacto-img {
+        position: static;
+        margin-top: 1.5rem;
+        align-self: center;
+    }
+}

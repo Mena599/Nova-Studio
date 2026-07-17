@@ -1,0 +1,259 @@
+
+.hero-izq {
+    background-color: #89251C;
+    color: #FEFEFA;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    background-image: linear-gradient(rgba(156, 21, 17, 0.6), rgba(156, 21, 17, 0.6)), url('../../imagenes/ChatGPT_Image_19_may_2026__14_47_48-removebg-preview.png');
+    background-size: cover;
+    background-position: center top -100%;
+ background-repeat: no-repeat;
+    text-align: center;
+    min-height: 880px;
+     
+}
+
+
+.hero-contenido {
+    max-width: 3800px; /* Evita que el texto se deforme en pantallas gigantes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #FEFEFA;
+    line-height: 1.2;
+}
+
+.texto-gris {
+    color: #C4B6B6;
+}
+
+.hero-parrafo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.30rem;
+    color: #FEFEFA;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-primary-nova {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    background-color: #FEFEFA;
+    color: #141414;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary-nova:hover {
+    background-color: #C4B6B6;
+}
+
+.btn-secondary-nova {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    background-color: transparent;
+    color: #FEFEFA;
+    border: 2px solid #FEFEFA;
+    border-radius: 8px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-nova:hover {
+    background-color: #FEFEFA;
+    color: #141414;
+}
+
+/* ==========================================
+   COLUMNA DERECHA (ESTILOS Y ELEMENTOS FLOTANTES)
+   ========================================== */
+.hero-der {
+    background-color: #FEFEFA;
+    position: relative; /* Clave para posicionar las imágenes de fondo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+   min-height: 880px;
+   
+}
+
+.derecha-contenido {
+    max-width: 450px;
+    z-index: 2; /* Por encima de los adornos si es necesario */
+    margin-left: 50px;
+    margin-right:0;
+    position: relative;
+}
+
+.subtitulo-digital {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #8C8C8C;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Tarjeta Roja del Lado Derecho */
+.tarjeta-disponibilidad {
+    background-color: #89251C;
+    color: #FEFEFA;
+    padding: 35px;
+    border-radius: 4px;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: #C4B6B6;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.tarjeta-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.tarjeta-linea {
+    border-top: 1px solid #FEFEFA;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+.tarjeta-lista {
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tarjeta-lista li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Viñetas personalizadas para la lista */
+.tarjeta-lista li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #FEFEFA;
+}
+
+/* Posicionamiento de Imágenes Decorativas (Figma) */
+.img-decorativa {
+    position: absolute;
+    pointer-events: none; /* No interfieren con los clics */
+    z-index: 3;
+}
+
+.camara-wrapper {
+    position: absolute;
+    top: 0;
+    right: 200px;
+    z-index: 1;
+}
+
+.camara {
+    width: 230px;
+    transform: rotate(-15deg);
+}
+
+.cerezas {
+    bottom: 0;
+    left: -5%;
+    width: 320px;
+    z-index: 3;
+    transform: rotate(-15deg);
+    bottom: -270px;
+}
+
+.oso {
+    bottom: 0;
+    left: 62%;
+    width: 268px;
+    z-index: 3;
+    bottom: -260px;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+    .padre {
+        min-height: auto;
+    }
+    .hero-izq, .hero-der {
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
+    .img-decorativa {
+        display: none; /* Escondemos los adornos en pantallas muy chicas para que no estorben */
+    }
+}
+
+
+/*Carrusel*/
+
+.marquee-contenedor {
+    background-color: #89251C;
+    overflow: hidden;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.marquee-contenido {
+    display: flex;
+    gap: 90px;
+    white-space: nowrap;
+    animation: desplazar 20s linear infinite;
+}
+
+.marquee-item {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #FEFEFA;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+.marquee-punto {
+    color: #FEFEFA;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes desplazar {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

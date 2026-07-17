@@ -1,0 +1,117 @@
+.main {
+    padding-top: 10.8%;
+}
+
+.hero-nosotros {
+    position: relative;
+    background-image: url('../../imagenes/nova_wrinkle.png');
+    background-size: 100% 100%;
+    background-position: center;
+    min-height: 700px;
+    padding: 60px 50px;
+    overflow: hidden;
+    color: #FEFEFA;
+}
+
+.quienes-contenido {
+    padding-left: 13%;
+    max-width: 700px;   /* CAMBIO: subí de 500px a 700px para que quepan texto + iconos */
+}
+
+.quienes-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #FEFEFA;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+/* CAMBIO NUEVO: wrapper que pone texto e iconos lado a lado y los baja si no caben */
+.texto-iconos-wrapper {
+    display: flex;
+    flex-wrap: wrap;      /* ← LA CLAVE: permite que los iconos bajen cuando no hay espacio */
+    gap: 50px;
+    align-items: center;
+}
+
+.quienes-texto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #FEFEFA;
+    line-height: 1.7;
+    flex: 1;              /* CAMBIO: el texto se adapta al espacio */
+    min-width: 280px;     /* CAMBIO: cuándo se bajan los iconos */
+    max-width: 350px;
+}
+
+/* CAMBIO IMPORTANTE: quité el position:absolute que causaba el amontonamiento */
+.quienes-iconos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin-top: 280px;
+}
+
+.iconos-fila {
+    display: flex;
+    gap: 40px;            /* CAMBIO: bajé de 80px a 40px para que no sea tan ancho */
+}
+
+/* CAMBIO NUEVO: solo la fila de resultados se centra */
+.iconos-fila-centrada {
+    justify-content: center;
+}
+
+.icono-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #FEFEFA;
+    white-space: nowrap;  /* CAMBIO: evita que el texto del icono se parta */
+}
+
+/* CORRECCIÓN: tenías ".icon-item" pero la clase es ".icono-item" */
+.icono-item i {
+    font-size: 1.9rem;
+}
+
+.quienes-camara {
+    position: absolute;
+    top: -40px;
+    left: 40%;
+    width: 350px;
+    transform: rotate(-25deg);
+    z-index: 2;
+}
+
+.quienes-perro {
+    position: absolute;
+    bottom: -10%;            /* CORRECCIÓN: tenías "bottom: 3" sin unidad, no funcionaba */
+    left: 12%;
+    width: 300px;
+    z-index: 3;
+}
+
+.quienes-labios {
+    position: absolute;
+    bottom: 20px;
+    left: 35%;
+    transform: rotate(15deg);
+}
+
+@media (max-width: 768px) {
+    .quienes-camara,
+    .quienes-perro,
+    .quienes-labios {
+        display: none;
+    }
+
+    .quienes-iconos {
+        margin-bottom: 40px;
+    }
+}

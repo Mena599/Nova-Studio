@@ -1,0 +1,261 @@
+.redes {
+    background-color: #FEFEFA;
+    padding: 3rem clamp(1.5rem, 5vw, 5.5rem);
+    box-sizing: border-box;
+}
+
+.redes-inner {
+    max-width: 1260px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;   /* NUEVO: evita que las columnas se centren verticalmente entre sí */
+    gap: 3rem;
+}
+
+/* ===================== */
+/* Columna izquierda      */
+/* ===================== */
+.parte-izq {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;   /* NUEVO: fuerza el título pegado arriba */
+}
+
+.redes-titulo {
+    font-family: 'Montserrat', sans-serif;
+    color: #89251C;
+    font-weight: 800;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin: 0 0 13.5rem 0;   /* CAMBIO: antes 2.5rem, se acerca más al primer ítem */
+}
+.redes-parte {
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;   /* CAMBIO: antes 2rem, más separación entre teléfono/correo/ubicación/reuniones */
+}
+
+.redes-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.redes-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.redes-icon i {
+    font-size: 1.5rem;
+    color: #141414;
+}
+
+.redes-info .tipo {
+    font-family: 'Montserrat', sans-serif;
+    color: #9C1511;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin: 0 0 0.25rem 0;
+}
+
+.redes-info .texto {
+    font-family: 'Montserrat', sans-serif;
+    color: #141414;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 0 0.25rem 0;
+}
+
+.redes-info .detalle {
+    font-family: 'Montserrat', sans-serif;
+    color: #141414;
+    font-weight: 400;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* ===================== */
+/* Divisor central        */
+/* ===================== */
+.redes-divisor {
+    width: 2px;
+    height: 600px;
+    background-color: #9C1511;
+    flex-shrink: 0;
+    align-self: stretch;   /* NUEVO: hace que solo este elemento se estire a la altura completa */
+}
+/* ===================== */
+/* Columna derecha        */
+/* ===================== */
+.parte-der {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* NUEVO: centra título y tarjetas */
+
+}
+
+.titulo-der {
+    margin-bottom: 2rem;
+    text-align: center;    /* NUEVO: centra el título también */
+}
+
+.titulo-der .redes-titulo {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.redes-titulo-p {
+    font-family: 'Montserrat', sans-serif;
+    color: #141414;
+    font-weight: 800;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.redes-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 340px;      /* NUEVO: tarjetas más angostas */
+}
+
+/* ===================== */
+/* Tarjeta de red social   */
+/* ===================== */
+.red-card {
+    border: 1.5px solid #141414;
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    box-sizing: border-box;
+}
+
+.red-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.red-card-header i {
+    font-size: 1.6rem;
+}
+
+.red-card-plataforma {
+    font-family: 'Montserrat', sans-serif;
+    color: #141414;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.red-card-usuario {
+    font-family: 'Montserrat', sans-serif;
+    color: #1877F2;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.red-card-texto {
+    font-family: 'Montserrat', sans-serif;
+    color: #141414;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
+}
+.red-card-boton {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FEFEFA;
+    border: 1.5px solid #141414;
+    color: #141414;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    text-decoration: none;
+    width: fit-content;
+}
+.red-card-boton:hover {
+    background-color: #141414;
+    color: #FEFEFA;
+}
+
+/* ===================== */
+/* Responsive              */
+/* ===================== */
+@media (max-width: 768px) {
+    .redes-inner {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .redes-divisor {
+        width: 100%;
+        height: 2px;
+    }
+}
+
+/* ===================== */
+/* Imágenes decorativas   */
+/* ===================== */
+.redes {
+    position: relative;
+    overflow: hidden;
+}
+
+.redes-img {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.redes-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1260px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+.redes-img-arana {
+    width: clamp(140px, 14vw, 240px);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) !important;
+    z-index: 2;
+}
+
+.redes-img-labios {
+    width: clamp(180px, 20vw, 330px);
+    bottom: -1rem;
+    left: -18rem;
+    transform: rotate(19deg) !important;
+    z-index: -2;
+}
+
+.redes-img-globos {
+    width: clamp(190px, 20vw, 350px);
+    bottom: -8rem;
+    right: -12rem;
+    transform: rotate(18deg) !important;
+}

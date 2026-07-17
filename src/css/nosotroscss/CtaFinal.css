@@ -1,0 +1,70 @@
+.cta-final {
+    background-color: #89251C;
+    padding: 3rem 3rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.cta-final-inner {
+    max-width: 1260px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.cta-final-texto h2 {
+    color: #FEFEFA;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.cta-final-globo {
+    height: 110px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.cta-final-boton {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: #FEFEFA;
+    color: #141414;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    padding: 0.9rem 1.5rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.cta-final-boton i {
+    font-size: 1.1rem;
+}
+
+.cta-final-labios {
+    height: 130px;
+    width: auto;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+    .cta-final-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .cta-final-labios {
+        margin-left: 0;
+    }
+}

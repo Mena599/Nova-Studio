@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+.nav-link-nova {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: #141414 !important;
+    transition: color 0.3s ease !important;
+    text-decoration: none !important;
+}
+
+.nav-link-nova:hover {
+    color: #9C1511 !important;
+     text-decoration: none;
+}
+
+.btn-nova {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    background-color: #9C1511 !important;
+    color: #FEFEFA !important;
+    border-radius: 8px !important;
+    transition: background-color 0.3s ease !important;
+     text-decoration: none;
+}
+
+.btn-nova:hover {
+    background-color: #7a100d !important;
+    color: #FEFEFA !important;
+}
+
+a.nav-link-nova {
+    text-decoration: none !important;
+}

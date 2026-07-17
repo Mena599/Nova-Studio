@@ -1,0 +1,68 @@
+.caso-uno {
+    background-color: #89251C;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;   /* centra las columnas en la pantalla */
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Columna izquierda - la tarjeta pegada a la derecha (hacia el centro) */
+.caso-izq {
+    display: flex;
+    justify-content: flex-end;   /* empuja la tarjeta a la derecha */
+    flex: 1;
+}
+
+/* Columna derecha - contenido pegado a la izquierda (hacia el centro) */
+.caso-der {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;     /* pega a la izquierda */
+    flex: 1;
+    padding-top: 100px;
+}
+
+/* El texto de arriba a la derecha */
+.caso-der-texto {
+    font-family: 'Montserrat', sans-serif;
+    color: #FEFEFA;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 400px;
+    margin-bottom: 40px;
+}
+
+.imagen-Anahana{
+    width: 100%;
+    max-width: 450px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+
+}
+
+
+
+/* La imagen */
+.caso-der img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 4px;
+}
+
+@media (max-width: 992px) {
+    .caso-uno {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .caso-izq,
+    .caso-der {
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+}
