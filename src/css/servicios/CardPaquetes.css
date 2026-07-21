@@ -1,0 +1,112 @@
+.Car-principal {
+    width: 100%;
+    max-width: 300px;
+    padding: 1.75rem 1.5rem;
+    border: 1.5px solid #9C1511;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.car-numero {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.5rem 0;
+}
+
+.car-titulo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0 0 0.4rem 0;
+    line-height: 1.1;
+}
+
+.car-subtitulo {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 0 0 1.25rem 0;
+    line-height: 1.3;
+}
+
+.car-lista {
+    list-style: none;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex-grow: 1;
+}
+
+.car-lista li {
+    font-size: 0.78rem;
+    font-weight: 500;
+    line-height: 1.4;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.car-lista li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+.car-boton {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
+/* ===================== */
+/* Variante clara (blanca, letras rojas) */
+/* ===================== */
+.Car-principal--clara {
+    background-color: #FEFEFA;
+    color: #9C1511;
+}
+
+.Car-principal--clara .car-lista li::before {
+    color: #9C1511;
+}
+
+.Car-principal--clara .car-boton {
+    background-color: #9C1511;
+    color: #FEFEFA;
+}
+
+.Car-principal--clara .car-boton:hover {
+    background-color: #89251C;
+}
+
+/* ===================== */
+/* Variante roja (roja, letras blancas) */
+/* ===================== */
+.Car-principal--roja {
+    background-color: #9C1511;
+    color: #FEFEFA;
+    border-color: #FEFEFA;
+}
+
+.Car-principal--roja .car-lista li::before {
+    color: #FEFEFA;
+}
+
+.Car-principal--roja .car-boton {
+    background-color: #FEFEFA;
+    color: #9C1511;
+}
+
+.Car-principal--roja .car-boton:hover {
+    background-color: #E8E4DC;
+}

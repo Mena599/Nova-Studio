@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "nombre": "BLOOM",
+        "descripcion": "Perfecto si tu negocio va empezando",
+        "incluye": [
+            "Red Social + Diseño de Perfil + Estructura De Cuenta Profesional",
+            "Levantamiento De Contenido (Fotografía Y Video)",
+            "Equipo de Cámara y Drone",
+            "Carga Y Diseño De 20 Publicaciones Al Mes",
+            "Edición De Contenido",
+            "Publicación De Cada Post",
+            "Una Campaña De Ads Al Mes",
+            "Planner De Contenido",
+            "Reporte De Métricas Mensual",
+            "Planeación Estratégica De Acuerdo A Tus Objetivos",
+            "Asesoría De Marketing: Gestión De La Red Social"
+        ],
+        "categoria": "redes",
+        "activo": true
+    },
+    {
+        "id": 2,
+        "nombre": "BLOSSOM",
+        "descripcion": "Diseñado al ejemplo de tu negocio",
+        "incluye": [
+            "2-3 Redes En Espejo (Tik Tok, Instagram Y FB)",
+            "Diseño De Perfil + Estructura Profesional De Cuenta",
+            "Levantamiento de contenido (Fotografía Y Video)",
+            "4 Horas De Sesión",
+            "Carga Y Diseño De 20 Publicaciones Al Mes",
+            "Edición Y Publicación De Cada Post",
+            "3-4 Campañas De Ads Al Mes",
+            "Reporte De Contenido",
+            "Planeación Estratégica De Acuerdo A Tus Objetivos",
+            "Asesoría De Marketing: Gestión De La Red Social"
+        ],
+        "categoria": "redes",
+        "activo": true
+    },
+    {
+        "id": 3,
+        "nombre": "SPARK",
+        "descripcion": "Contenido generado por usuarios reales",
+        "incluye": [
+            "Producción de 5 videos UGC al mes",
+            "Guion y dirección creativa incluidos",
+            "Selección de creadores afines a tu marca",
+            "Edición profesional lista para publicar",
+            "Derechos de uso en redes propias",
+            "Reporte de desempeño mensual"
+        ],
+        "categoria": "ugc",
+        "activo": true
+    },
+    {
+        "id": 4,
+        "nombre": "GLOW",
+        "descripcion": "Contenido UGC a mayor escala",
+        "incluye": [
+            "Producción de 10 videos UGC al mes",
+            "Guion y dirección creativa incluidos",
+            "Red de creadores exclusiva para tu marca",
+            "Edición avanzada con motion graphics",
+            "Derechos de uso ampliados (ads y web)",
+            "Estrategia de distribución por plataforma",
+            "Reporte de desempeño quincenal"
+        ],
+        "categoria": "ugc",
+        "activo": true
+    },
+    {
+        "id": 5,
+        "nombre": "ROOT",
+        "descripcion": "Bases sólidas para tu identidad de marca",
+        "incluye": [
+            "Diseño de logotipo y variaciones",
+            "Paleta de colores y tipografías",
+            "Manual de marca básico (PDF)",
+            "Aplicación en 3 piezas digitales",
+            "1 ronda de revisiones"
+        ],
+        "categoria": "branding",
+        "activo": true
+    },
+    {
+        "id": 6,
+        "nombre": "CROWN",
+        "descripcion": "Identidad de marca completa y consistente",
+        "incluye": [
+            "Diseño de logotipo y variaciones",
+            "Paleta de colores, tipografías y iconografía",
+            "Manual de marca completo (PDF)",
+            "Aplicación en papelería y redes sociales",
+            "Guía de tono de voz",
+            "3 rondas de revisiones",
+            "Asesoría de posicionamiento de marca"
+        ],
+        "categoria": "branding",
+        "activo": true
+    }
+]
