@@ -1,0 +1,110 @@
+.servicio-branding {
+    background-color: #FEFEFA;
+    padding: 3.5rem clamp(1.5rem, 5vw, 5.5rem) 4rem;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-branding-inner {
+    position: relative;
+    max-width: 1260px;
+    margin: 0 auto 3rem auto;
+}
+
+.imagen-perro-branding {
+    width: clamp(120px, 12vw, 190px);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.header-branding-inner .categoria {
+    font-family: 'Montserrat', sans-serif;
+    color: #9C1511;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.header-branding-inner h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #9C1511;
+    font-weight: 800;
+    font-size: clamp(2rem, 3.5vw, 2.6rem);
+    margin: 0;
+}
+
+.grid-paquetes-branding {
+    align-items: stretch;
+}
+
+/* ===================== */
+/* Tarjeta de presentación (Branding) */
+/* ===================== */
+.card-branding-intro {
+    width: 100%;
+    max-width: 340px;
+    padding: 1.75rem 1.5rem;
+    border: 1.5px solid #9C1511;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #FEFEFA;
+    color: #9C1511;
+}
+
+.cbi-paquete {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.75rem 0;
+}
+
+.cbi-img-top {
+    width: 100%;
+    max-width: 180px;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+}
+
+.cbi-titulo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0 0 0.75rem 0;
+}
+
+.cbi-texto {
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.cbi-img-bottom {
+    width: 100%;
+    max-width: 140px;
+    align-self: center;
+    margin: 1.5rem 0;
+}
+
+.cbi-boton {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    border: 1.5px solid #9C1511;
+    background-color: #FEFEFA;
+    color: #9C1511;
+    cursor: pointer;
+    width: fit-content;
+    align-self: center;
+}
+
+.cbi-boton:hover {
+    background-color: #9C1511;
+    color: #FEFEFA;
+}

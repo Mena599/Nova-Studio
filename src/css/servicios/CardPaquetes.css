@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 300px;
     padding: 1.75rem 1.5rem;
-    border: 1.5px solid #9C1511;
+    border: 1.5px solid #89251C;
     border-radius: 4px;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
@@ -73,15 +73,15 @@
 /* ===================== */
 .Car-principal--clara {
     background-color: #FEFEFA;
-    color: #9C1511;
+    color: #89251C;
 }
 
 .Car-principal--clara .car-lista li::before {
-    color: #9C1511;
+    color: #89251C;
 }
 
 .Car-principal--clara .car-boton {
-    background-color: #9C1511;
+    background-color: #89251C;
     color: #FEFEFA;
 }
 
@@ -93,7 +93,7 @@
 /* Variante roja (roja, letras blancas) */
 /* ===================== */
 .Car-principal--roja {
-    background-color: #9C1511;
+    background-color: #89251C;
     color: #FEFEFA;
     border-color: #FEFEFA;
 }
@@ -104,7 +104,7 @@
 
 .Car-principal--roja .car-boton {
     background-color: #FEFEFA;
-    color: #9C1511;
+    color: #89251C;
 }
 
 .Car-principal--roja .car-boton:hover {

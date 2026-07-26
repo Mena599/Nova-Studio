@@ -1,0 +1,45 @@
+.servicio-ugc {
+    background-color: #89251C;
+    padding: 3.5rem clamp(1.5rem, 5vw, 5.5rem) 4rem;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-ugc-inner {
+    position: relative;
+    max-width: 1260px;
+    margin: 0 auto 5rem auto; 
+}
+
+.header-ugc-inner .categoria {
+    font-family: 'Montserrat', sans-serif;
+    color: #FEFEFA;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.header-ugc-inner h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+    font-weight: 800;
+    font-size: clamp(2rem, 3.5vw, 2.6rem);
+    margin: 0;
+    max-width: 60%;
+    line-height: 1.15;
+}
+
+.header-ugc-inner h1 span {
+    font-weight: 800;
+    color: #C4B6B6;   /* o el color que quieras para la segunda parte */
+}
+
+.imagen-gotas {
+    position: absolute;
+    top: -4rem;
+    right: 5rem;
+    width: clamp(200px, 22vw, 340px);
+    pointer-events: none;
+    z-index: 0;
+}
