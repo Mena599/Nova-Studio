@@ -35,7 +35,7 @@ public class DBConnection {
         source.setUsername(DB_USER);
         source.setPassword(DB_PASS);
         //protocolo: t_servicio://host:port/database ?=q-params
-        source.setUrl(String.format("jdbc:mysql://%s:%s/%s",DB_HOST,DB_PORT,DB_NAME));
+        source.setUrl(String.format("jdbc:mysql://%s:%s/%s?createDatabaseIfNotExist=true",DB_HOST,DB_PORT,DB_NAME));
         return source;
     }
 }
