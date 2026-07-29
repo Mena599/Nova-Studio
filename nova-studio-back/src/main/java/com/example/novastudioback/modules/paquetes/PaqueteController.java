@@ -5,14 +5,12 @@ import com.example.novastudioback.modules.paquetes.dtos.PaqueteDto;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 @RestController()
 @RequestMapping("/api/nova")
 @AllArgsConstructor
-public class PauqueteController {
+public class PaqueteController {
 
     private final PaqueteService paqueteService;
 
@@ -34,6 +32,17 @@ public class PauqueteController {
         return paqueteService.savePaquete(dto);
     }
 
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ApiResponse> update(@PathVariable Long id, @Valid @RequestBody PaqueteDto dto){
+        return paqueteService.updatePaquete(id, dto);
+    }
+
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<ApiResponse> delete(@PathVariable Long id){
+        return paqueteService.deletePaquete(id);
+    }
 
     /*
     *

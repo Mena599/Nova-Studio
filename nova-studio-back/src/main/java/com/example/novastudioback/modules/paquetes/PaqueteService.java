@@ -66,6 +66,52 @@ public class PaqueteService {
 
     }
 
+    @Transactional(rollbackFor = Exception.class)
+    public ResponseEntity<ApiResponse> updatePaquete(Long id, PaqueteDto dto){
+        ApiResponse response;
+
+        Paquetes paquete = paqueteRepository.findById(id).orElse(null);
+        if (paquete == null) {
+            response = new ApiResponse("Paquete no encontrado", true, HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(response, response.getStatus());
+        }
+
+        Categorias categoria = categoriaRepository.findById(dto.getIdCategoria()).orElse(null);
+        if (categoria == null) {
+            response = new ApiResponse("La categoría indicada no existe", true, HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(response, response.getStatus());
+        }
+
+        paquete.setNombre(dto.getNombre());
+        paquete.setDescripcion(dto.getDescripcion());
+        paquete.setOrdenAparicion(dto.getOrdenAparicion());
+        paquete.setActivo(dto.isActivo());
+        paquete.setIncluye(dto.getIncluye());
+        paquete.setCategoria(categoria);
+
+        Paquetes actualizado = paqueteRepository.save(paquete);
+
+        response = new ApiResponse("Paquete actualizado correctamente", actualizado, HttpStatus.OK);
+        return new ResponseEntity<>(response, response.getStatus());
+    }
+
+
+
+    @Transactional(rollbackFor = Exception.class)
+    public ResponseEntity<ApiResponse> deletePaquete(Long id){
+        ApiResponse response;
+
+        Paquetes paquete = paqueteRepository.findById(id).orElse(null);
+        if (paquete == null) {
+            response = new ApiResponse("Paquete no encontrado", true, HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(response, response.getStatus());
+        }
+
+        paqueteRepository.delete(paquete);
+
+        response = new ApiResponse("Paquete eliminado correctamente", null, HttpStatus.OK);
+        return new ResponseEntity<>(response, response.getStatus());
+    }
 
 }
 
