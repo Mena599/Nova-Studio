@@ -2,6 +2,9 @@ package com.example.novastudioback.modules.paquetes;
 
 
 import com.example.novastudioback.kernel.ApiResponse;
+import com.example.novastudioback.modules.categorias.CategoriaRepository;
+import com.example.novastudioback.modules.categorias.Categorias;
+import com.example.novastudioback.modules.paquetes.dtos.PaqueteDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +15,8 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 public class PaqueteService {
 
-    private final PaqueRepository paqueteRepository;
+    private final PaqueteRepository paqueteRepository;
+    private final CategoriaRepository categoriaRepository;
 
     @Transactional(readOnly = true)
     public ResponseEntity<ApiResponse>  getAllPaquetes(){
@@ -35,26 +39,82 @@ public class PaqueteService {
         }
         return new ResponseEntity<>(response, response.getStatus());
     }
-     }
 
-     /*
-     *
-     *  @Transactional(readOnly = true)
-    public ResponseEntity<ApiResponse> searchBooks(Long id){
-        ApiResponse  response = null;
+    @Transactional(rollbackFor = Exception.class)
+    public ResponseEntity<ApiResponse> savePaquete(PaqueteDto dto){
+        ApiResponse response;
 
-        Book book = bookRepository.findById(id).orElse(null);
+        Categorias categoria = categoriaRepository.findById(dto.getIdCategoria()).orElse(null);
 
-        if(book == null){
-            response = new ApiResponse("Buook No encontrado", true, HttpStatus.NOT_FOUND);
-        }else {
-            response = new ApiResponse("Buook encontrado", book, HttpStatus.OK);
+        if (categoria == null) {
+            response = new ApiResponse("La categria indicada no existe", true, HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(response, response.getStatus());
         }
 
+        Paquetes paquete = new Paquetes();
+        paquete.setNombre(dto.getNombre());
+        paquete.setDescripcion(dto.getDescripcion());
+        paquete.setOrdenAparicion(dto.getOrdenAparicion());
+        paquete.setActivo(dto.isActivo());
+        paquete.setIncluye(dto.getIncluye());
+        paquete.setCategoria(categoria);
+
+        Paquetes guardado = paqueteRepository.save(paquete);
+
+        response = new ApiResponse("Paquete creado correctamente", guardado, HttpStatus.CREATED);
+        return new ResponseEntity<>(response, response.getStatus());
+
+    }
+
+
+}
+
+
+
+/*@Transactional(rollbackFor = Exception.class)
+public ResponseEntity<ApiResponse> crear(PaqueteDto dto){
+
+    Categorias categoria = categoriaRepository.findById(dto.getIdCategoria()).orElse(null);
+    if (categoria == null) {
+        ApiResponse error = new ApiResponse("La categoría indicada no existe", true, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(error, error.getStatus());
+    }
+
+    Paquetes paquete = new Paquetes();
+    paquete.setNombre(dto.getNombre());
+    paquete.setDescripcion(dto.getDescripcion());
+    paquete.setOrdenAparicion(dto.getOrdenAparicion());
+    paquete.setActivo(dto.isActivo());
+    paquete.setIncluye(dto.getIncluye());
+    paquete.setCategoria(categoria);
+
+    Paquetes guardado = paqueteRepository.save(paquete);
+
+    ApiResponse response = new ApiResponse("Paquete creado correctamente", guardado, HttpStatus.CREATED);
+    return new ResponseEntity<>(response, response.getStatus());
+}*/
+
+
+
+    /*
+    *
+    *
+   @Transactional
+    public ResponseEntity<ApiResponse> crear(Paquetes paquete, Long idCategoria){
+
+        Categorias categoria = categoriaRepository.findById(idCategoria).orElse(null);
+        if (categoria == null) {
+            ApiResponse error = new ApiResponse("La categoría indicada no existe", true, HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(error, error.getStatus());
+        }
+
+        paquete.setCategoria(categoria);
+        Paquetes guardado = paqueteRepository.save(paquete);
+
+        ApiResponse response = new ApiResponse("Paquete creado correctamente", guardado, HttpStatus.CREATED);
         return new ResponseEntity<>(response, response.getStatus());
     }
-     *
-     * */
+    * */
 
 
 

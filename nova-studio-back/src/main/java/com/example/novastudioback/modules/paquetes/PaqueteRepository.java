@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PaqueRepository   extends JpaRepository<Paquetes, Long>
+public interface PaqueteRepository extends JpaRepository<Paquetes, Long>
 {
 }
