@@ -8,21 +8,24 @@ import ServicioBranding from "./componets/ServicioBranding";
 
 export default function Servicios() {
     const [paquetes, setPaquetes] = useState([])
-
     useEffect(() => {
         cargarPaquetes()
     }, [])
 
-    const cargarPaquetes = async () => setPaquetes(
-        await PaqueteController.findALL()
-    )
+    const cargarPaquetes = async () => {
+        const data = await PaqueteController.findALL()
+        const activos = data
+            .filter(p => p.activo)
+            .sort((a, b) => a.ordenAparicion - b.ordenAparicion)
+        setPaquetes(activos)
+    }
 
     return (
         <main>
             <Header />
-            <ServicioRedes lista={paquetes.filter(p => p.categoria === "redes")} />
-            <ServicioUgc lista={paquetes.filter(p => p.categoria === "ugc")} />
-            <ServicioBranding lista={paquetes.filter(p => p.categoria === "branding")} />
+            <ServicioRedes lista={paquetes.filter(p => p.categoria.slug === "redes")} />
+            <ServicioUgc lista={paquetes.filter(p => p.categoria.slug === "ugc")} />
+            <ServicioBranding lista={paquetes.filter(p => p.categoria.slug === "branding")} />
         </main>
     )
 }
