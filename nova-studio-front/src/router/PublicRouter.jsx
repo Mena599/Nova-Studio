@@ -6,23 +6,24 @@ import Error404 from "../errors/Error404"
 import NavBar from "../modules/public/global-components/NavBar"
 import Footer from "../modules/public/global-components/Footer.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
-import Contacto from "../modules/public/contactos/Contact\o.jsx";
+import Contacto from "../modules/public/contactos/Contacto.jsx";
+
 export default function PublicRouter() {
     return (
         <>
             <ScrollToTop />
             <NavBar />
-            <Routes>
-                <Route path="/" element={<Navigate to="/home" />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/servicios" element={< Servicios />} />
-                <Route path="/nosotros" element={< Nosotros />} />
-                <Route path="/contacto" element={< Contacto />} />
-                <Route path="/*" element={<Error404 />} />
-            </Routes>
+            <div style={{ paddingTop: "50px" }}>
+                <Routes>
+                    <Route path="/" element={<Navigate to="/home" />} />
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/servicios" element={<Servicios />} />
+                    <Route path="/nosotros" element={<Nosotros />} />
+                    <Route path="/contacto" element={<Contacto />} />
+                    <Route path="/*" element={<Error404 />} />
+                </Routes>
+            </div>
             <Footer />
-
         </>
-
     )
-} 
+}

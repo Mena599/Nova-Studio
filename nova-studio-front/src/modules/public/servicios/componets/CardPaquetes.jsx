@@ -1,11 +1,6 @@
 import { useState } from "react"
 import "../../../../css/servicios/CardPaquetes.css"
 
-/**
- * 
- * variante, id, nombre, descripcion, incluye, categoria, activo
- */
-
 export default function CardPaquetes({ item, variante }) {
 
     const [paquete, setPaquete] = useState(item || {

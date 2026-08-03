@@ -2,6 +2,7 @@ package com.example.novastudioback.modules.paquetes;
 
 import com.example.novastudioback.kernel.BaseEntity;
 import com.example.novastudioback.modules.categorias.Categorias;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;

@@ -32,5 +32,5 @@ public class PaqueteDto {
     private List<String> incluye;
 
     @NotNull(message = "La categoría es obligatoria")
-    private Long idCategoria; // <- así viene desde el front, igual que tu genderIds pero para uno solo
+    private Long idCategoria;
 }
