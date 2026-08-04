@@ -27,7 +27,7 @@ export default function Login() {
             }
 
             localStorage.setItem("nova_token", data.data.token)
-            navigate("/admin/dashboard")
+            navigate("/dashboard")
 
         } catch (err) {
             setError(err.message)
