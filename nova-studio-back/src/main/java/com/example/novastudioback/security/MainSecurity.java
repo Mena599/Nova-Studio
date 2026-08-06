@@ -33,6 +33,7 @@ public class MainSecurity {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/nova/auth/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/nova/**").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/nova/citas").permitAll()  // NUEVO
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);

@@ -1,0 +1,274 @@
+.agendar-page {
+    min-height: 100vh;
+    background-color: #FEFEFA;
+    padding: 3rem clamp(1.5rem, 5vw, 5.5rem);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;   /* ¿está esta línea? */
+    align-items: center;
+    justify-content: center;
+}
+
+.agendar-card {
+    width: 100%;
+    max-width: 1100px;
+    background-color: #9C1511;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+}
+
+/* ===================== */
+/* Columna izquierda      */
+/* ===================== */
+.agendar-izq {
+    flex: 1;
+    background-color: #89251C;
+    padding: 2.5rem 2.25rem;
+    color: #FEFEFA;
+    box-sizing: border-box;
+}
+
+.agendar-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    margin: 0 0 0.5rem 0;
+    opacity: 0.9;
+}
+
+.agendar-izq h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    line-height: 1.2;
+    margin: 0 0 0.75rem 0;
+}
+
+.agendar-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin: 0 0 1rem 0;
+    opacity: 0.85;
+}
+
+.agendar-texto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin: 0 0 2rem 0;
+    opacity: 0.9;
+}
+
+.agendar-pasos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    border-top: 1px solid rgba(254, 254, 250, 0.25);
+    padding-top: 1.5rem;
+}
+
+.agendar-paso {
+    display: flex;
+    gap: 0.9rem;
+}
+
+.agendar-paso span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 0.75rem;
+    background-color: #FEFEFA;
+    color: #9C1511;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.paso-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin: 0 0 0.2rem 0;
+}
+
+.paso-texto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0.85;
+}
+
+/* ===================== */
+/* Columna derecha        */
+/* ===================== */
+.agendar-der {
+    flex: 1.3;
+    background-color: #FEFEFA;
+    padding: 2.5rem 2.25rem;
+    box-sizing: border-box;
+}
+
+.agendar-form-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    color: #141414;
+    margin: 0 0 0.4rem 0;
+}
+
+.agendar-der h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    color: #9C1511;
+    line-height: 1.2;
+    margin: 0 0 1.5rem 0;
+}
+
+.agendar-row {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.agendar-row .agendar-campo {
+    flex: 1;
+}
+
+.agendar-campo {
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+.agendar-campo label {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #9C1511;
+    margin-bottom: 0.4rem;
+}
+
+.agendar-campo input,
+.agendar-campo select,
+.agendar-campo textarea {
+    width: 100%;
+    padding: 0.65rem 0.8rem;
+    border: 1.5px solid #9C1511;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: #141414;
+    box-sizing: border-box;
+    resize: vertical;
+    background-color: #FEFEFA;
+}
+
+.agendar-campo input::placeholder,
+.agendar-campo textarea::placeholder {
+    color: #B9AFAF;
+}
+
+.agendar-campo input:focus,
+.agendar-campo select:focus,
+.agendar-campo textarea:focus {
+    outline: none;
+    border-color: #89251C;
+}
+
+.agendar-campo select:disabled {
+    background-color: #F1EEEA;
+    color: #9C1511;
+    cursor: not-allowed;
+}
+
+.agendar-sin-horarios {
+    color: #9C1511;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin: 0.4rem 0 0 0;
+}
+
+.agendar-error {
+    color: #9C1511;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin: -0.5rem 0 1rem 0;
+}
+
+.agendar-boton {
+    background-color: #9C1511;
+    color: #FEFEFA;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    float: right;
+}
+
+.agendar-boton:hover {
+    background-color: #89251C;
+}
+
+.agendar-boton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ===================== */
+/* Pantalla de éxito      */
+/* ===================== */
+.agendar-exito {
+    background-color: #FEFEFA;
+    border: 1.5px solid #9C1511;
+    border-radius: 10px;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    max-width: 420px;
+}
+
+.agendar-exito i {
+    font-size: 2.5rem;
+    color: #2E7D32;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.agendar-exito h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #141414;
+    margin: 0 0 0.75rem 0;
+}
+
+.agendar-exito p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #6B6B6B;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ===================== */
+/* Responsive              */
+/* ===================== */
+@media (max-width: 900px) {
+    .agendar-card {
+        flex-direction: column;
+    }
+
+    .agendar-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

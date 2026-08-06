@@ -7,6 +7,7 @@ import NavBar from "../modules/public/global-components/NavBar"
 import Footer from "../modules/public/global-components/Footer.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
 import Contacto from "../modules/public/contactos/Contacto.jsx";
+import Agendar from "../modules/public/agendar/Agendar.jsx";
 
 export default function PublicRouter() {
     return (
@@ -20,6 +21,7 @@ export default function PublicRouter() {
                     <Route path="/servicios" element={<Servicios />} />
                     <Route path="/nosotros" element={<Nosotros />} />
                     <Route path="/contacto" element={<Contacto />} />
+                    <Route path="/agendar" element={<Agendar />} />
                     <Route path="/*" element={<Error404 />} />
                 </Routes>
             </div>

@@ -27,10 +27,13 @@ export default function Navbar() {
                     </ul>
                 </div>
 
-                <button className="btn-nova px-4 py-2">
-                    <i className='bi bi-calendar me-2'></i>
-                    Cotizar Ahora
-                </button>
+                <Link to="/agendar">
+                    <button className="btn-nova px-4 py-2">
+                        <i className='bi bi-calendar me-2'></i>
+                        Cotizar Ahora
+                    </button>
+                </Link>
+
             </div>
         </nav>
     )

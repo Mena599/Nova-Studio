@@ -1,0 +1,88 @@
+.minical-popover {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    z-index: 50;
+    background-color: #FEFEFA;
+    border: 1.5px solid #9C1511;
+    border-radius: 8px;
+    padding: 0.9rem;
+    width: 260px;
+    box-shadow: 0 8px 24px rgba(20, 20, 20, 0.15);
+}
+
+.minical-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.minical-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #141414;
+    margin: 0;
+}
+
+.minical-header button {
+    background: none;
+    border: none;
+    color: #9C1511;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.minical-dias-semana {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 0.4rem;
+}
+
+.minical-dias-semana span {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #9C1511;
+}
+
+.minical-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.minical-celda-vacia {
+    display: block;
+}
+
+.minical-dia {
+    background: none;
+    border: none;
+    border-radius: 6px;
+    padding: 0.45rem 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    color: #141414;
+    cursor: pointer;
+}
+
+.minical-dia:hover {
+    background-color: #FBEAE9;
+}
+
+.minical-dia--invalido {
+    color: #C4B6B6;
+    cursor: not-allowed;
+}
+
+.minical-dia--invalido:hover {
+    background-color: transparent;
+}
+
+.minical-dia--hoy {
+    border: 1.5px solid #9C1511;
+    font-weight: 700;
+}

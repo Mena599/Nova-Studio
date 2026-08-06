@@ -26,8 +26,9 @@ export default function Login() {
                 throw new Error(data.message)
             }
 
+            // Ahora
             localStorage.setItem("nova_token", data.data.token)
-            navigate("/dashboard")
+            window.location.href = "/dashboard"
 
         } catch (err) {
             setError(err.message)
