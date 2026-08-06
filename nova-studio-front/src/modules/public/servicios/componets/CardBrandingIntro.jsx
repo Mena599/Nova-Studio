@@ -10,7 +10,7 @@ export default function CardBrandingIntro({ titulo, texto, imgTop, imgBottom }) 
 
             <img src={imgBottom} className="cbi-img-bottom" alt="" />
 
-            <button className="cbi-boton">Cotiza ahora</button>
+
         </div>
     )
 }

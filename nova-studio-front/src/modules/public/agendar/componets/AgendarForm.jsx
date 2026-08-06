@@ -2,8 +2,13 @@ import { useState, useEffect } from "react"
 import MiniCalendario from "../componets/MiniCalendario"
 import PaqueteController from "../../servicios/controller/PaqueteController"
 import CitaController from "../controllers/CitaController"
+import { useSearchParams } from "react-router-dom"
 
 export default function AgendarForm({ onExito }) {
+
+    const [searchParams] = useSearchParams()
+    const idPaqueteDesdeURL = searchParams.get("paquete")
+
     const [paquetes, setPaquetes] = useState([])
     const [horariosDisponibles, setHorariosDisponibles] = useState([])
     const [cargandoHorarios, setCargandoHorarios] = useState(false)
@@ -14,7 +19,7 @@ export default function AgendarForm({ onExito }) {
         correo: "",
         telefono: "",
         nombreNegocio: "",
-        idPaquete: "",
+        idPaquete: idPaqueteDesdeURL || "",
         fecha: "",
         hora: "",
         mensaje: ""

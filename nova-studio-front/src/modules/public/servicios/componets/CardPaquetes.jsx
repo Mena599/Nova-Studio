@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "../../../../css/servicios/CardPaquetes.css"
+import { Link } from "react-router-dom"
 
 export default function CardPaquetes({ item, variante }) {
 
@@ -31,8 +32,10 @@ export default function CardPaquetes({ item, variante }) {
                     }
                 </ul>
 
-                <button className="car-boton">Cotiza ahora</button>
 
+                <Link to={`/agendar?paquete=${paquete.id}`}>
+                    <button className="car-boton">Cotiza ahora</button>
+                </Link>
             </div>
         </main>
     )

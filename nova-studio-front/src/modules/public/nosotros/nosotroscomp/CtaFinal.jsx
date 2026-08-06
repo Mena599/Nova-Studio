@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "../../../../css/nosotroscss/CtaFinal.css"
 
 import labios from "../../../../imagenes/labios.png"
@@ -11,10 +12,10 @@ export default function CtaFinal() {
                 </div>
 
 
-                <a href="#agendar" className="cta-final-boton">
+                <Link to="/agendar" className="cta-final-boton">
                     <i className="bi bi-calendar-event"></i>
                     AGENDAR AHORA POR GOOGLE MEET
-                </a>
+                </Link>
 
                 <img
                     src={labios}

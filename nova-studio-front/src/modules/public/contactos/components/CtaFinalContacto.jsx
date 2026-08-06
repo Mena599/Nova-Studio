@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "../../../../css/contacto/CtaFinalContacto.css"
 import osoGlobo from "../../../../imagenes/oso.png"
 
@@ -21,11 +22,16 @@ export default function CtaFinalContacto() {
                     </p>
                 </div>
                 <div className="der">
-                    <a href="#agendar" className="cta-contacto-boton"
-                        data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                    <Link
+                        to="/agendar"
+                        className="cta-contacto-boton"
+                        data-aos="zoom-in"
+                        data-aos-duration="800"
+                        data-aos-delay="400"
+                    >
                         <i className="bi bi-calendar-event"></i>
                         Agenda ahora
-                    </a>
+                    </Link>
 
                     <img
                         src={osoGlobo}

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "../../../../css/homecss/Dudascss.css"
 
 export default function DudasSeccion() {
@@ -14,10 +15,12 @@ export default function DudasSeccion() {
                                 <span className="texto-gris">NEGOCIO</span>
                             </h1>
                         </div>
-                        <button className="btn-primary-nova2">
-                            <i className="bi bi-calendar me-2"></i>
-                            Cotizar ahora
-                        </button>
+                        <Link to="/agendar">
+                            <button className="btn-primary-nova2">
+                                <i className="bi bi-calendar me-2"></i>
+                                Cotizar ahora
+                            </button>
+                        </Link>
                     </div>
                     <img src="src/imagenes/perro.png" className="dudas-perro" alt="perro"
                         data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" />

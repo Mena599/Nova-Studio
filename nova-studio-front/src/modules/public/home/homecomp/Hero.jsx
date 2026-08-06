@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "../../../../css/homecss/Hero.css"
 
 export default function Hero() {
@@ -24,13 +25,18 @@ export default function Hero() {
                             cómo podemos ayudarte.
                         </p>
                         <div className="hero-botones" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                            <button className="btn-primary-nova">
-                                <i className="bi bi-calendar me-2"></i>
-                                Cotizar ahora
-                            </button>
-                            <button className="btn-secondary-nova">
-                                Ver paquetes
-                            </button>
+                            <Link to="/agendar">
+                                <button className="btn-primary-nova">
+                                    <i className="bi bi-calendar me-2"></i>
+                                    Cotizar ahora
+                                </button>
+                            </Link>
+
+                            <Link to="/servicios">
+                                <button className="btn-secondary-nova">
+                                    Ver paquetes
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

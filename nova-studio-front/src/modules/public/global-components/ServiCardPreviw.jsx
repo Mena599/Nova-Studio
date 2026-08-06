@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ServiCardPreviw({ numero, titulo, subtitulo, items, color }) {
     return (
         <div className="col-md-4 col-12 mb-4">
@@ -15,8 +17,9 @@ export default function ServiCardPreviw({ numero, titulo, subtitulo, items, colo
                         <li key={index}>{item}  </li>
                     ))}
                 </ul>
-
-                <button className="service-boton">ver mas...</button>
+                <Link to="/servicios">
+                    <button className="service-boton">ver mas...</button>
+                </Link>
 
             </div>
         </div>
